@@ -26,6 +26,22 @@ button {
   cursor: pointer;
 }
 
+input {
+  font-size: 16px;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  color: white;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+input::placeholder {
+  color: white;
+}
+input:focus, input:active {
+  outline: 0;
+}
+
 .hidden {
   display: none;
 }
@@ -44,6 +60,24 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.js-login-form {
+  margin-bottom: 45px;
+}
+.js-login-form input {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 3px solid white;
+}
+.js-login-form input:focus::placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+.js-login-form input[type=submit] {
+  border-bottom: 0;
 }
 
 .js-clock {
@@ -81,21 +115,9 @@ button {
   text-align: center;
 }
 .js-todo-form input {
-  font-size: 16px;
-  border: none;
-  padding: 10px;
-  width: 100%;
-  color: white;
-  background-color: transparent;
   border: 3px solid white;
   border-radius: 10px;
   box-sizing: border-box;
-}
-.js-todo-form input::placeholder {
-  color: white;
-}
-.js-todo-form input:focus, .js-todo-form input:active {
-  outline: 0;
 }
 .js-todo-form .js-todo-list {
   margin-top: 13px;
@@ -111,9 +133,6 @@ button {
 }
 .js-todo-form .js-todo-list li {
   padding-bottom: 15px;
-}
-.js-todo-form .js-todo-list li:hover {
-  color: #999;
 }
 
 /*# sourceMappingURL=style.css.map */
